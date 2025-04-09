@@ -1,0 +1,170 @@
+.user-internship-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsla(0, 0%, 0%, 0.700);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.user-internship-modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 650px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.user-internship-modal-header {
+    background-color: var(--moss-green);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.user-internship-modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    flex-grow: 1;
+    color: white;
+}
+
+.user-internship-modal-close {
+    position: absolute;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    opacity: 0.8;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.user-internship-modal-close:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-internship-modal-form {
+    padding: 24px;
+}
+
+.user-internship-modal-form-group {
+    margin-bottom: 24px;
+}
+
+.user-internship-modal-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.user-internship-modal-form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+}
+
+.user-internship-modal-form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--moss-green);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(34, 97, 58, 0.1);
+}
+
+.user-internship-modal-form-group input[type="text"]::placeholder {
+    color: #94a3b8;
+}
+
+.user-internship-modal-upload-text {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.user-internship-modal-file-container {
+    border: 2px dashed #e2e8f0;
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+    background-color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.user-internship-modal-file-container:hover {
+    border-color: var(--moss-green);
+    background-color: #f1f5f9;
+}
+
+.user-internship-modal-file-input {
+    display: none;
+}
+
+.user-internship-modal-file-label {
+    cursor: pointer;
+    color: #64748b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-internship-modal-file-label i {
+    font-size: 1.75rem;
+    color: var(--moss-green);
+}
+
+.user-internship-modal-submit {
+    background-color: var(--moss-green);
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.user-internship-modal-submit:hover {
+    background-color: #1a472a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgb(34, 97, 58);
+}

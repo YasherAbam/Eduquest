@@ -1,0 +1,213 @@
+.offcampus_pending-details-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.offcampus_pending-details-modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.offcampus_pending-details-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: var(--moss-green);
+    color: white;
+}
+
+.offcampus_pending-details-modal-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.offcampus_pending-close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.offcampus_pending-close-button:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.offcampus_pending-details-modal-body {
+    padding: 20px;
+}
+
+.offcampus_pending-details-section {
+    margin-bottom: 24px;
+}
+
+.offcampus_pending-details-section h5 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.offcampus_pending-info-item {
+    display: flex;
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.offcampus_pending-info-item .label {
+    color: #666;
+    width: 100px;
+}
+
+.offcampus_pending-info-item .value {
+    color: #333;
+    font-weight: 500;
+}
+
+.offcampus_pending-status-section {
+    margin-bottom: 24px;
+}
+
+.offcampus_pending-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.offcampus_pending-step-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.offcampus_pending-step-item.clickable {
+    cursor: pointer;
+}
+
+.offcampus_pending-step-item.clickable:hover {
+    background: #f0f0f0;
+}
+
+.offcampus_pending-step-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: transparent;
+    transition: all 0.2s;
+}
+
+.offcampus_pending-step-icon.completed {
+    background: var(--moss-green);
+    border-color: var(--moss-green);
+    color: white;
+}
+
+.offcampus_pending-step-name {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* VPAA Dialog */
+.offcampus_pending-vpaa-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.offcampus_pending-vpaa-dialog {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.offcampus_pending-vpaa-dialog h4 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.offcampus_pending-vpaa-dialog-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.offcampus_pending-vpaa-button {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.offcampus_pending-vpaa-button.not-yet {
+    background-color: #fff;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.offcampus_pending-vpaa-button.yes {
+    background-color: #fff;
+    color: var(--moss-green);
+    border: 1px solid var(--moss-green);
+}
+
+.offcampus_pending-vpaa-button.not-yet:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.offcampus_pending-vpaa-button.yes:hover {
+    background-color: var(--moss-green);
+    color: white;
+}

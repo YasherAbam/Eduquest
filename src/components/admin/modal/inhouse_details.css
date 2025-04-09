@@ -1,0 +1,524 @@
+.details-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.details-modal-content {
+    background: #ffffff; /* Modal background */
+    border-radius: 16px; /* Increased border radius for consistency */
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.details-modal-header {
+    padding: 16px 24px;
+    background-color: var(--moss-green);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.details-modal-header h4 {
+    color: white;
+    font-size: 1.6rem; /* Slightly reduced for harmony */
+    font-weight: 600;
+    margin: 0;
+}
+
+.details-close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.75rem; /* Match font size with compliance modal */
+    cursor: pointer;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.details-close-button:hover {
+    transform: rotate(180deg);
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+.details-modal-body {
+    padding: 20px 24px;
+}
+
+.highlighted-section {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    background-color: #e8f5e9; /* Soft green background for a calming effect */
+    border-radius: 8px;
+    padding: 12px; /* Match padding from compliance modal */
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.department-section {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Reduced gap for a cleaner look */
+}
+
+.department-section h6 {
+    margin: 0;
+    font-size: 1.2rem; /* Match font size with compliance modal */
+    font-weight: 600;
+    color: #2c3e50; /* Darker color for better contrast */
+}
+
+.department-section p {
+    margin: 4px 0 0; /* Add margin for spacing */
+    font-size: 0.9rem; /* Slightly reduced for a minimalist feel */
+    line-height: 1.4; /* Increase line height for readability */
+    color: #555; /* Darker text color for better contrast */
+}
+
+.file-section {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.file-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.file-icon {
+    color: var(--moss-green);
+    font-size: 1.25rem;
+}
+
+.file-name {
+    flex: 1;
+    font-size: 1rem; /* Adjusted font size */
+    color: #495057;
+}
+
+.file-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.view-btn, .download-btn {
+    padding: 10px 16px; /* Increased padding for buttons */
+    border-radius: 6px;
+    font-size: 0.9rem; /* Slightly reduced for a minimalist feel */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    background-color: #f8f9fa; /* Light background for buttons */
+    color: #495057; /* Darker text color */
+}
+
+.view-btn:hover, .download-btn:hover {
+    background-color: #e2e6ea; /* Slightly darker on hover */
+}
+
+.revise-btn, .issue-btn {
+    flex: 1;
+    padding: 12px 16px; /* Increased padding for buttons */
+    border-radius: 8px;
+    font-size: 0.9rem; /* Consistent font size for buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.revise-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+}
+
+.issue-btn {
+    background-color: var(--moss-green);
+    color: white;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.15);
+}
+
+/* Hover effects */
+.revise-btn:hover, .issue-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.issue-btn:hover {
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+/* Custom scrollbar styles */
+.details-modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.details-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.details-modal-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.details-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Button focus states */
+.view-btn:focus, .download-btn:focus,
+.revise-btn:focus, .issue-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .details-modal-content {
+        width: 95%;
+    }
+
+    .file-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .file-actions {
+        margin-top: 12px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+.details-close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.75rem;  /* Updated font size */
+    cursor: pointer;
+    border-radius: 50%;  /* Changed to circle */
+    width: 44px;        /* Fixed width */
+    height: 44px;       /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.details-close-button:hover {
+    transform: rotate(180deg);
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+.user-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    background-color: #e9ecef; /* Light background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 24px; /* Adjust size as needed */
+    color: #2c3e50; /* Match the color used in compliance modal */
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: auto; /* Align to the right */
+}
+
+.status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.reviewed {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+/* Inhouse Revision Modal Styles */
+.inhouse-revision-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.inhouse-revision-modal-content {
+    background: white;
+    padding: 0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inhouse-revision-modal-header {
+    background-color: var(--moss-green);
+    padding: 15px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inhouse-revision-modal-header h4 {
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.inhouse-revision-modal-body {
+    padding: 20px;
+}
+
+.inhouse-revision-modal-content textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.inhouse-revision-modal-content textarea:focus {
+    outline: none;
+    border-color: var(--moss-green);
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.1);
+}
+
+.inhouse-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.inhouse-modal-buttons .send-button {
+    padding: 8px 24px;
+    background-color: var(--moss-green);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inhouse-modal-buttons .send-button:hover {
+    background-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.inhouse-modal-buttons .cancel-button {
+    padding: 8px 24px;
+    background-color: #fff;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inhouse-modal-buttons .cancel-button:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: translateY(-1px);
+}
+
+
+/* Issue Modal Styles */
+.inhouse-issue-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.inhouse-issue-modal-content {
+    background: white;
+    padding: 0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inhouse-issue-modal-header {
+    background-color: var(--moss-green);
+    padding: 15px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inhouse-issue-modal-header h4 {
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.inhouse-issue-modal-body {
+    padding: 20px;
+}
+
+.inhouse-issue-modal-body .form-group {
+    margin-bottom: 20px;
+}
+
+.inhouse-issue-modal-body label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.inhouse-issue-modal-body textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.inhouse-issue-modal-body textarea:focus {
+    outline: none;
+    border-color: var(--moss-green);
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.1);
+}
+
+.upload-area {
+    border: 2px dashed #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--moss-green);
+    color: var(--moss-green);
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+.inhouse-issue-modal-body .inhouse-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.inhouse-issue-modal-body .send-button {
+    padding: 8px 24px;
+    background-color: var(--moss-green);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inhouse-issue-modal-body .send-button:hover {
+    background-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.inhouse-issue-modal-body .cancel-button {
+    padding: 8px 24px;
+    background-color: #fff;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inhouse-issue-modal-body .cancel-button:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: translateY(-1px);
+}

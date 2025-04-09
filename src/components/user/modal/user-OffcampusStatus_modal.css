@@ -1,0 +1,191 @@
+.offcampus-status-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.700);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.offcampus-status-modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.offcampus-status-modal-header {
+    background-color: var(--moss-green);
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.offcampus-status-modal-header h2 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.offcampus-status-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: absolute;
+    right: 1.5rem;
+}
+
+.offcampus-status-modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+.offcampus-status-modal-body {
+    padding: 1.5rem;
+}
+
+.offcampus-status-content-box {
+    background: #f8fafc;
+    border-radius: 6px;
+    padding: 1.5rem;
+    position: relative;
+}
+
+/* Stepper styles */
+.offcampus-status-steps {
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+}
+
+.offcampus-status-steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 3rem;
+}
+
+.offcampus-status-line {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    right: 45px;
+    height: 2px;
+    background: #e5e7eb;
+    z-index: 0;
+}
+
+.offcampus-status-line-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--moss-green);
+    transition: width 0.3s ease;
+}
+
+.offcampus-status-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.offcampus-status-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.offcampus-status-icon i {
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.offcampus-status-step.active .offcampus-status-icon {
+    border-color: var(--moss-green);
+    background: white;
+}
+
+.offcampus-status-step.active .offcampus-status-icon i {
+    color: var(--moss-green);
+}
+
+.offcampus-status-step.completed .offcampus-status-icon {
+    background: var(--moss-green);
+    border-color: var(--moss-green);
+}
+
+.offcampus-status-step.completed .offcampus-status-icon i {
+    color: white;
+}
+
+.offcampus-status-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+    font-weight: 500;
+}
+
+.offcampus-status-step.active .offcampus-status-label {
+    color: var(--moss-green);
+    font-weight: 600;
+}
+
+.offcampus-status-details {
+    margin-top: 2rem;
+}
+
+.offcampus-status-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+}
+
+.offcampus-status-item:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.offcampus-status-label {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.offcampus-status-value {
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 0.875rem;
+}

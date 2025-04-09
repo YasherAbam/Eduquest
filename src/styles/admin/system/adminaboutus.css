@@ -1,0 +1,208 @@
+.about-us-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.about-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about-card h3 {
+    color: var(--moss-green);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--moss-green);
+}
+
+.about-card p {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-card ul li {
+    color: var(--text-dark);
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.about-card ul li:before {
+    content: "•";
+    color: var(--moss-green);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.admin-about-us .admin-dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 5px 0;
+    display: none;
+    z-index: 1000;
+}
+
+.admin-about-us .admin-dropdown-content.active {
+    display: block;
+}
+
+.admin-about-us .admin-dropdown-content li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.admin-about-us .admin-dropdown-content li:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    color: var(--moss-green);
+}
+
+.admin-about-us .admin-dropdown-content li:hover i {
+    color: var(--moss-green);
+}
+
+.admin-about-us .admin-dropdown-content li:last-child:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.admin-about-us .admin-dropdown-content li:last-child:hover i {
+    color: #e74c3c;
+}
+
+.admin-about-us .admin-dropdown-content i {
+    width: 20px;
+    text-align: center;
+    color: inherit;
+}
+
+/* Profile Icon Styles */
+.admin-about-us .profile-pic {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.admin-about-us .profile-pic:hover {
+    opacity: 0.8;
+}
+
+.admin-about-us .profile-pic i {
+    font-size: 30px;
+    color: #254e35;
+}
+
+.admin-about-us #userName {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.admin-dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 5px 0;
+    display: none;
+    z-index: 1000;
+}
+
+.admin-dropdown-content.active {
+    display: block;
+}
+
+.admin-dropdown-content li {
+    list-style: none;
+}
+
+.admin-dropdown-content li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+/* Profile hover effect */
+.admin-dropdown-content li.profile-button:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    color: var(--moss-green);
+}
+
+.admin-dropdown-content li.profile-button:hover i {
+    color: var(--moss-green);
+}
+
+/* Logout hover effect */
+.admin-dropdown-content li.logout-button:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.admin-dropdown-content li.logout-button:hover i {
+    color: #e74c3c;
+}
+
+.admin-dropdown-content li i {
+    width: 20px;
+    text-align: center;
+    color: inherit;
+}
+
+/* Profile Icon Styles */
+.profile-pic {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.profile-pic:hover {
+    opacity: 0.8;
+}
+
+.profile-pic i {
+    font-size: 30px;
+    color: #254e35;
+}
+
+#userName {
+    color: var(--text-dark);
+    font-weight: 500;
+}

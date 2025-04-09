@@ -1,0 +1,83 @@
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.feedback-form h3 {
+    color: var(--moss-green);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.rating-container {
+    margin-bottom: 25px;
+}
+
+.rating-container label {
+    display: block;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.feedback-container {
+    margin-bottom: 25px;
+}
+
+.feedback-container label {
+    display: block;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.feedback-container textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    resize: vertical;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.feedback-container textarea:focus {
+    outline: none;
+    border-color: var(--moss-green);
+}
+
+.anonymous-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #4a4a4a;
+}
+
+.anonymous-option input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.anonymous-option label {
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: var(--moss-green);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--dark-moss);
+}

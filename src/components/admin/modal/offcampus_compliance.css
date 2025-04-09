@@ -1,0 +1,268 @@
+.offcampus-compliance-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.offcampus-compliance-modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.offcampus-compliance-modal-header {
+    padding: 20px 24px;
+    background-color: #2e5c3e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.offcampus-compliance-modal-header h4 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.3px;
+}
+
+.offcampus-compliance-close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    width: 28px;
+    height: 28px;
+    line-height: 1;
+}
+
+.offcampus-compliance-close-button:hover {
+    opacity: 1;
+}
+
+.offcampus-compliance-modal-body {
+    padding: 24px;
+}
+
+.offcampus-compliance-info-box {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.offcampus-compliance-icon-container {
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.offcampus-compliance-icon {
+    color: #2e5c3e;
+    font-size: 20px;
+}
+
+.offcampus-compliance-text {
+    flex: 1;
+}
+
+.offcampus-compliance-text h6 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e5c3e;
+    margin-bottom: 4px;
+}
+
+.offcampus-compliance-text p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.offcampus-compliance-status-badge {
+    background: #fff3cd;
+    color: #856404;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: auto;
+    letter-spacing: 0.3px;
+}
+
+.offcampus-compliance-item {
+    padding: 16px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.offcampus-compliance-item span {
+    color: #2e5c3e;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.offcampus-compliance-file-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.offcampus-compliance-view-btn,
+.offcampus-compliance-download-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    border: 1px solid #e9ecef;
+    cursor: pointer;
+    background-color: white;
+    color: #2e5c3e;
+    font-weight: 500;
+}
+
+.offcampus-compliance-view-btn:hover,
+.offcampus-compliance-download-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #2e5c3e;
+}
+
+.offcampus-compliance-status-options {
+    margin: 24px 0;
+    display: flex;
+    gap: 32px;
+}
+
+.offcampus-compliance-status-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #495057;
+    cursor: pointer;
+}
+
+.offcampus-compliance-status-options input[type="radio"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #2e5c3e;
+}
+
+.offcampus-compliance-note {
+    margin: 24px 0;
+}
+
+.offcampus-compliance-note label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #495057;
+    font-weight: 500;
+}
+
+.offcampus-compliance-note textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    transition: all 0.2s;
+}
+
+.offcampus-compliance-note textarea:focus {
+    outline: none;
+    border-color: #2e5c3e;
+    box-shadow: 0 0 0 3px rgba(46, 92, 62, 0.1);
+}
+
+.offcampus-compliance-forward-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2e5c3e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: all 0.2s;
+}
+
+.offcampus-compliance-forward-button:hover {
+    background-color: #234730;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(46, 92, 62, 0.2);
+}
+
+.offcampus-compliance-forward-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .offcampus-compliance-modal-content {
+        width: 95%;
+        margin: 16px;
+        max-height: 90vh;
+    }
+
+    .offcampus-compliance-status-options {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .offcampus-compliance-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .offcampus-compliance-file-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

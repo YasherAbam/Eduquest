@@ -1,0 +1,342 @@
+.admin-requirements {
+    min-height: calc(100vh - 60px);
+    padding: 2rem;
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.requirements-content {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;  /* Put content above footer */
+}
+
+
+.requirement-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.requirement-header h3 {
+    color: #1a4731;
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    flex: 1;
+}
+
+.requirements-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.requirements-header h1 {
+    margin: 0;
+    color: #1a4731;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.add-requirement-btn {
+    background-color: #1a4731;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.add-requirement-btn:hover {
+    background-color: #4d866a;
+    transform: translateY(-1px);
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.requirement-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+    min-height: 260px;
+}
+
+.requirement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.requirement-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.requirement-header h3 {
+    color: #1a4731;
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.status-badge {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+.requirement-title-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.status-badge.active {
+    background-color: #c6f6d5;
+    color: #22543d;
+}
+
+.status-badge.inactive {
+    background-color: #fed7d7;
+    color: #9b2c2c;
+}
+
+.requirement-card p {
+    color: #4a5568;
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.requirement-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.category-tag {
+    background-color: #e6fffa;
+    color: #234e52;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.edit-btn,
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.edit-btn {
+    color: #1a4731;
+}
+
+.edit-btn:hover {
+    background-color: #e6fffa;
+}
+
+.delete-btn {
+    color: #9b2c2c;
+}
+
+.delete-btn:hover {
+    background-color: #fed7d7;
+}
+
+/* Modal Styles */
+.requirement-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.requirement-modal {
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #1a4731;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4a5568;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background-color: #f7fafc;
+    color: #2d3748;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1a4731;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #2d3748;
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1a4731;
+    box-shadow: 0 0 0 3px rgba(26, 71, 49, 0.1);
+    background-color: white;
+}
+
+.save-btn {
+    background-color: #1a4731;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #2c5282;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .requirement-modal {
+        width: 95%;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .requirements-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .add-requirement-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,136 @@
+:root {
+    --light-moss: #4a8b67;
+    --hover-moss: #3a7355;
+}
+
+.faqs-content {
+    padding: 20px;
+}
+
+.faq-card {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--light-moss);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--hover-moss);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500
+}
+
+.faq-answer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: white;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+    color: var(--light-moss);
+}
+
+.faq-icon.open {
+    transform: rotate(180deg);
+}
+
+.faq-categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: white;
+    color: var(--light-green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.category-btn.active {
+    background: var(--light-moss);
+    color: white;
+}
+
+.category-btn:hover {
+    background: var(--hover-moss);
+    color: white;
+}
+
+.faq-card {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--light-moss);
+    padding-left: 24px;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.faq-question .faq-icon {
+    color: var(--light-moss);
+}
+
+.faq-card.active .faq-question {
+    background-color: var(--light-moss);
+    color: white;
+    border-left: 4px solid var(--hover-moss);
+}
+
+.faq-card.active .faq-question h3,
+.faq-card.active .faq-icon {
+    color: white;
+}

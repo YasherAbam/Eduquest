@@ -1,0 +1,238 @@
+.compliance-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.compliance-modal-content {
+    background: #ffffff;
+    border-radius: 16px; /* Increased border radius for a softer look */
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.compliance-modal-header {
+    padding: 16px 24px;
+    background-color: var(--moss-green);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.compliance-close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.75rem; /* Match font size with details modal */
+    cursor: pointer;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.compliance-close-button:hover {
+    transform: rotate(180deg);
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+.compliance-modal-body {
+    padding: 20px 24px;
+    color: #333;
+    font-size: 1rem; /* Match font size with details modal */
+    line-height: 1.5; /* Increased line height for better readability */
+    font-family: 'YourFontFamily', sans-serif; /* Ensure the same font family */
+}
+
+.compliance-highlighted-section {
+    background-color: #e8f5e9; /* Soft green background for a calming effect */
+    border-radius: 8px;
+    padding: 12px; /* Reduced padding for a more compact look */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+}
+
+.highlight-icon-container {
+    width: 40px; /* Set width for the circular background */
+    height: 40px; /* Set height for the circular background */
+    border-radius: 50%; /* Make it circular */
+    background-color: #ffffff; /* White background for the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px; /* Space between icon and text */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.highlight-icon {
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #2c3e50; /* Darker color for better contrast */
+}
+
+.highlight-text {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+}
+
+.highlight-text h6 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Slightly smaller font size for a minimalist look */
+    font-weight: 600; /* Bold for emphasis */
+    color: #2c3e50; /* Darker color for better contrast */
+}
+
+.highlight-text p {
+    margin: 2px 0 0; /* Add margin for spacing */
+    font-size: 0.9rem; /* Smaller font size for a cleaner look */
+    line-height: 1.4; /* Increase line height for readability */
+    color: #555; /* Darker text color for better contrast */
+}
+
+.compliance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.compliance-item span {
+    flex: 1; /* Allow the text to take available space */
+    font-size: 1rem; /* Match font size */
+    color: #333; /* Darker text color for better contrast */
+}
+
+.view-btn, .download-btn {
+    padding: 10px 16px; /* Increased padding for buttons */
+    border-radius: 6px;
+    font-size: 0.9rem; /* Match font size with details modal */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    background-color: #f8f9fa; /* Light background for buttons */
+    color: #495057; /* Darker text color */
+}
+
+.view-btn:hover, .download-btn:hover {
+    background-color: #e2e6ea; /* Slightly darker on hover */
+}
+
+.status-options {
+    margin: 20px 0;
+}
+
+.status-options label {
+    margin-right: 15px;
+    font-size: 1rem; /* Match font size */
+}
+
+.note-section {
+    margin: 20px 0;
+}
+
+.note-section label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.note-section textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem; /* Increased font size */
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.note-section textarea:focus {
+    border-color: var(--moss-green);
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.25);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forward-status-button {
+    background-color: var(--moss-green);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem; /* Increased font size */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.forward-status-button:hover {
+    background-color: darkgreen;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar styles */
+.compliance-modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.compliance-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.compliance-modal-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.compliance-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Button focus states */
+.update-status-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
+}

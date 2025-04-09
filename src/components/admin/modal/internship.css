@@ -1,0 +1,179 @@
+.internship-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.internship-modal-content {
+    background: #ffffff;
+    border-radius: 16px;
+    width: 85%;
+    max-width: 1100px;
+    height: 75%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.internship-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    background-color: var(--moss-green);
+    color: white;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.internship-modal-header h4 {
+    font-size: 1.5rem; /* Match inhouse header font size */
+    font-weight: 600; /* Match inhouse header font weight */
+    letter-spacing: 0.5px; /* Match inhouse header letter spacing */
+}
+
+.internship-modal-body {
+    padding: 24px 32px; /* Match inhouse body padding */
+}
+
+.internship-modal-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.internship-modal-column {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.internship-modal-column h4 {
+    font-size: 1.25rem; /* Match inhouse column header font size */
+    color: #2c3e50; /* Match inhouse column header color */
+    margin-bottom: 20px; /* Match inhouse margin */
+    padding-bottom: 12px; /* Match inhouse padding */
+    border-bottom: 2px solid #eee; /* Match inhouse border */
+}
+
+.department-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.department-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+.department-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.department-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.department-item:hover .department-icon {
+    background-color: var(--moss-green);
+    color: white;
+}
+
+.department-info span {
+    font-size: 1rem; /* Match inhouse department info font size */
+    color: #2c3e50; /* Match inhouse department info color */
+    font-weight: 500; /* Match inhouse department info font weight */
+}
+
+.status-badge {
+    font-size: 0.85rem; /* Match inhouse status badge font size */
+    font-weight: 500; /* Match inhouse status badge font weight */
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-reviewed {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.department-item:hover .status-badge {
+    transform: scale(1.05);
+}
+
+.date-info {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-left: auto;
+    padding-right: 20px;
+    font-weight: 500;
+}
+
+.internship-close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.75rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.internship-close-button:hover {
+    transform: rotate(180deg);
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}   
+
+/* Custom scrollbar styles */
+.internship-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.internship-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.internship-modal-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.internship-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}

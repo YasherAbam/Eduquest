@@ -1,0 +1,20 @@
+.user-profile {
+    padding: 30px;
+}
+
+.user-profile h2 {
+    color: var(--moss-green);
+}
+
+.edit-profile-btn {
+    background-color: var(--moss-green);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    background-color: rgba(37, 78, 53, 0.8);
+}

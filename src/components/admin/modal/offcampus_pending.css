@@ -1,0 +1,216 @@
+.offcampus_pending_modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.offcampus_pending_modal_content {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.offcampus_pending_modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: var(--moss-green);
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.offcampus_pending_modal_header h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.offcampus_pending_modal_body {
+    padding: 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.no-requests-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.no-requests {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.offcampus_pending_item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.offcampus_pending_item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: var(--moss-green);
+}
+
+.offcampus_pending_department_info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.offcampus_pending_department_icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--moss-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.offcampus_pending_department_details {
+    flex: 1;
+}
+
+.offcampus_pending_department_name {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.offcampus_pending_activity_name {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.offcampus_pending_stepper_container {
+    margin-top: 12px;
+    padding: 0 8px;
+}
+
+.offcampus_pending_stepper_track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.offcampus_pending_stepper_track::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.offcampus_pending_stepper_step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.offcampus_pending_step_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.offcampus_pending_step_label {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.offcampus_pending_stepper_step.completed .offcampus_pending_step_icon {
+    background-color: var(--moss-green);
+    border-color: var(--moss-green);
+    color: white;
+}
+
+.offcampus_pending_stepper_step.completed .offcampus_pending_step_label {
+    color: var(--moss-green);
+}
+
+.offcampus_pending_close_button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.offcampus_pending_close_button:hover {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+/* Custom scrollbar */
+.offcampus_pending_modal_content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.offcampus_pending_modal_content::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.offcampus_pending_modal_content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.offcampus_pending_modal_content::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}

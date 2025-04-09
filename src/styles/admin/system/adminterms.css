@@ -1,0 +1,128 @@
+.terms-content {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.terms-section {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.terms-section h3 {
+    color: var(--light-moss);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    font-size: 1.4rem;
+}
+
+.terms-section p {
+    color: #2c3e50;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.terms-section ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.terms-section li {
+    color: #2c3e50;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.terms-section strong {
+    color: var(--light-moss);
+}
+
+.terms-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.terms-header h2 {
+    color: var(--light-moss);
+    margin-bottom: 10px;
+}
+
+.terms-header p {
+    color: #666;
+}
+
+.table-of-contents {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.table-of-contents h4 {
+    color: var(--light-moss);
+    margin-bottom: 15px;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-of-contents li {
+    margin-bottom: 10px;
+}
+
+.table-of-contents a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: var(--light-moss);
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: var(--light-moss);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.last-updated {
+    font-style: italic;
+    color: #666;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.terms-section .highlight-box {
+    background: #f8f9fa;
+    border-left: 4px solid var(--light-moss);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.terms-section .warning-text {
+    color: #dc3545;
+    font-weight: 500;
+}

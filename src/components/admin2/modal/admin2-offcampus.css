@@ -1,0 +1,302 @@
+.admin2-offcampus-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.admin2-offcampus-container {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin2-offcampus-header {
+    background-color: #254e35;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    flex-shrink: 0;
+}
+
+.admin2-offcampus-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.admin2-offcampus-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.admin2-offcampus-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* List View Styles */
+.admin2-offcampus-list {
+    padding: 1rem;
+}
+
+.admin2-offcampus-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin2-offcampus-item:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin2-offcampus-item-info {
+    flex: 1;
+}
+
+.admin2-offcampus-item-info h3 {
+    margin: 0;
+    color: #004d40;
+    font-size: 1rem;
+}
+
+.admin2-offcampus-item-info p {
+    margin: 0.25rem 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.admin2-offcampus-item-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    color: #666;
+}
+
+/* Details View Styles */
+.admin2-offcampus-content {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: calc(90vh - 60px);
+}
+
+.admin2-offcampus-back {
+    background: none;
+    border: none;
+    color: var(--moss-green);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin2-offcampus-back:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin2-offcampus-details {
+    margin-bottom: 2rem;
+}
+
+.admin2-offcampus-details h3 {
+    margin: 0;
+    color: #004d40;
+}
+
+.admin2-offcampus-details p {
+    margin: 0.25rem 0;
+    color: #666;
+}
+
+.admin2-offcampus-document {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin2-offcampus-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin2-offcampus-filename {
+    color: #004d40;
+}
+
+.admin2-offcampus-download {
+    background: none;
+    border: none;
+    color: var(--moss-green);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admin2-offcampus-download:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin2-offcampus-status {
+    margin-top: 2rem;
+}
+
+.admin2-offcampus-options {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.admin2-offcampus-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.admin2-offcampus-message {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin2-offcampus-message input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.admin2-offcampus-upload {
+    border: 2px dashed #004d40;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.admin2-offcampus-upload-btn {
+    background: none;
+    border: none;
+    color: var(--moss-green);
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.admin2-offcampus-upload-btn:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin2-offcampus-footer {
+    padding: 1rem;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.admin2-offcampus-revise,
+.admin2-offcampus-update {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+}
+
+.admin2-offcampus-revise {
+    background-color: transparent;
+    color: var(--moss-green);
+    border: 1px solid var(--moss-green);
+}
+
+.admin2-offcampus-revise:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin2-offcampus-update {
+    background-color: var(--moss-green);
+    color: white;
+    border: none;
+}
+
+.admin2-offcampus-update:hover {
+    background-color: #1b3b27;
+    transform: translateY(-2px);
+}
+
+/* Status Dots */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-pending {
+    background-color: #ffd700;
+}
+
+.status-approved {
+    background-color: #4caf50;
+}
+
+.status-rejected {
+    background-color: #f44336;
+}

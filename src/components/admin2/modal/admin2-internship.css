@@ -1,0 +1,337 @@
+.admin2-internship-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.admin2-internship-container {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin2-internship-header {
+    background-color: #254e35;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    flex-shrink: 0;
+}
+
+.admin2-internship-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color:white;
+}
+
+.admin2-internship-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.admin2-internship-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* List View Styles */
+.admin2-internship-list {
+    padding: 1rem;
+}
+
+.admin2-internship-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin2-internship-item:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin2-internship-item-info {
+    flex: 1;
+}
+
+.admin2-internship-item-info h3 {
+    margin: 0;
+    color: #004d40;
+    font-size: 1rem;
+}
+
+.admin2-internship-item-info p {
+    margin: 0.25rem 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.admin2-internship-item-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    color: #666;
+}
+
+/* Details View Styles */
+.admin2-internship-content {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: calc(90vh - 60px); /* Adjust based on header height */
+}
+
+.admin2-internship-back {
+    background: none;
+    border: none;
+    color: var(--moss-green);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin2-internship-back:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin2-internship-details {
+    margin-bottom: 2rem;
+}
+
+.admin2-internship-details h3 {
+    margin: 0;
+    color: #004d40;
+}
+
+.admin2-internship-details p {
+    margin: 0.25rem 0;
+    color: #666;
+}
+
+.admin2-internship-document {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin2-internship-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin2-internship-filename {
+    color: #004d40;
+}
+
+.admin2-internship-download {
+    background: none;
+    border: none;
+    color: var(--moss-green);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admin2-internship-download:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin2-internship-status {
+    margin-top: 2rem;
+}
+
+.admin2-internship-options {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.admin2-internship-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.admin2-internship-message {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin2-internship-message input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.admin2-internship-upload {
+    border: 2px dashed #004d40;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.admin2-internship-upload-btn {
+    background: none;
+    border: none;
+    color: var(--moss-green);
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.admin2-internship-upload-btn:hover {
+    background-color: rgba(37, 78, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+.admin2-internship-footer {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.admin2-internship-update {
+    background-color: var(--moss-green);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin2-internship-update:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 78, 53, 0.1);
+    background-color: var(--dark-moss);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-dot.status-pending {
+    background-color: #ffc107;
+}
+
+.admin2-internship-footer {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.admin2-internship-revise, .admin2-internship-update {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+}
+
+.admin2-internship-revise {
+    background-color: transparent;
+    color: var(--moss-green);
+    border: 1px solid var(--moss-green);
+}
+
+.admin2-internship-revise:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 78, 53, 0.1);
+    background-color: var(--moss-green);
+    color: white;
+}
+
+.admin2-internship-update {
+    background-color: var(--moss-green);
+    color: white;
+    border: none;
+}
+
+.admin2-internship-update:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 78, 53, 0.1);
+    background-color: var(--dark-moss);
+}
+
+/* Custom Scrollbar */
+.admin2-internship-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin2-internship-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.admin2-internship-content::-webkit-scrollbar-thumb {
+    background: #254e35;
+    border-radius: 4px;
+}
+
+.admin2-internship-content::-webkit-scrollbar-thumb:hover {
+    background: #254e35;
+}
